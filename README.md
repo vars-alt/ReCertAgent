@@ -163,3 +163,16 @@ framework.
 certifier, probe) with the model's own judgment and empty `human_label`/
 `human_notes` columns for a reviewer to fill in — supports the protocol's
 "manually audit at least 100 oracle decisions" requirement.
+
+## Paper Evaluation
+
+The paper reports a controlled 24-instance pilot covering six
+post-remediation scenarios and four certifiers: Keyword-Based,
+PI-Guard, Semantic, and Static LLM.
+
+The machine-readable output used for the reported tables is available
+under `paper_results/`.
+
+The repository also contains an earlier exploratory 582-instance
+evaluation under `legacy/`. That experiment is retained for
+completeness but is not used in the paper.
