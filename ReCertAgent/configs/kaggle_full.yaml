@@ -1,0 +1,18 @@
+seed: 42
+input_path: data/processed/cases.jsonl
+output_path: results/predictions.jsonl
+models:
+  qwen:
+    name: Qwen/Qwen2.5-3B-Instruct
+    load_in_4bit: true
+    max_new_tokens: 384
+  piguard:
+    name: leolee99/PIGuard
+  embedder:
+    name: BAAI/bge-small-en-v1.5
+experiment:
+  certifiers: [keyword, piguard, semantic, llm_static]
+  max_cases: 582
+  held_out_probe_budget: 5
+  abstain_low: 0.40
+  abstain_high: 0.65
